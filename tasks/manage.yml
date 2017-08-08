@@ -13,3 +13,11 @@
     chdir: "{{ item.path | default(omit) }}"
   with_items: "{{ pm2_apps }}"
   become_user: "{{ pm2_user }}"
+
+- name: saving apps
+  environment: "{{ item.env | default({}) }}"
+  command: "pm2 save"
+  args:
+    chdir: "{{ item.path | default(omit) }}"
+  with_items: "{{ pm2_apps }}"
+  become_user: "{{ pm2_user }}"
