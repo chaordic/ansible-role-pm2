@@ -13,3 +13,4 @@
     chdir: "{{ item.path | default(omit) }}"
   with_items: "{{ pm2_apps }}"
   become_user: "{{ pm2_user }}"
+  when: pm2_app_start == 'true'

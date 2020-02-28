@@ -1,7 +1,4 @@
 ---
-- name: Kill pm2 before start by systemd
-  command:
-     pkill PM2
 
 - name: Configuring service
   service:

@@ -23,3 +23,5 @@ pm2_version:
 pm2_user: root
 # user home
 pm2_user_home: /root
+# control to start only with systemd
+pm2_app_start: false
